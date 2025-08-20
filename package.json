@@ -8,7 +8,8 @@
     "dev": "nodemon src/app.js",
     "deploy": "vercel --prod",
     "seed":"node src/seed/seed.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo Portfolio"
   },
   "keywords": [],
   "author": "",
