@@ -47,8 +47,8 @@ server.get("/",(req,res)=>{
     res.status(200).json({message:'running'})
 })
 
-server.listen(8000,()=>{
-    console.log('server [STARTED] ~ http://localhost:8000');
-})
+// server.listen(8000,()=>{
+//     console.log('server [STARTED] ~ http://localhost:8000');
+// })
 
 module.exports = { server };
