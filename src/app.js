@@ -24,7 +24,8 @@ connectToDB();
 // middlewares
 app.use(
   cors({
-    origin: process.env.ORIGIN,
+    // origin: process.env.ORIGIN,
+    origin: ["https://ms-traders.vercel.app"],
     credentials: true,
     exposedHeaders: ["X-Total-Count"],
     methods: ["GET", "POST", "PATCH", "DELETE"],
