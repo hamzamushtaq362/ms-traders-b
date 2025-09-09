@@ -25,7 +25,7 @@ connectToDB();
 app.use(
   cors({
     // origin: process.env.ORIGIN,
-    origin: ["https://ms-traders.vercel.app"],
+    origin: ["https://ms-traders.vercel.app", "http://localhost:3000"],
     credentials: true,
     exposedHeaders: ["X-Total-Count"],
     methods: ["GET", "POST", "PATCH", "DELETE"],
@@ -51,8 +51,8 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "running" });
 });
 
-// app.listen(8000, () => {
-//   console.log("app [STARTED] ~ http://localhost:8000");
-// });
+app.listen(8000, () => {
+  console.log("app [STARTED] ~ http://localhost:8000");
+});
 
 module.exports = { app };
