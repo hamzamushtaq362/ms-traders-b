@@ -22,15 +22,16 @@ const app = express();
 connectToDB();
 
 // middlewares
-app.use(
-  cors({
-    // origin: process.env.ORIGIN,
-    origin: ["https://ms-traders.vercel.app", "http://localhost:3000"],
-    credentials: true,
-    exposedHeaders: ["X-Total-Count"],
-    methods: ["GET", "POST", "PATCH", "DELETE"],
-  })
-);
+// app.use(
+//   cors({
+//     // origin: process.env.ORIGIN,
+//     origin: ["https://ms-traders.vercel.app", "http://localhost:3000"],
+//     credentials: true,
+//     exposedHeaders: ["X-Total-Count"],
+//     methods: ["GET", "POST", "PATCH", "DELETE"],
+//   })
+// );
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("tiny"));
@@ -51,8 +52,8 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "running" });
 });
 
-app.listen(8000, () => {
-  console.log("app [STARTED] ~ http://localhost:8000");
-});
+// app.listen(8000, () => {
+//   console.log("app [STARTED] ~ http://localhost:8000");
+// });
 
 module.exports = { app };
